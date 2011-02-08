@@ -44,7 +44,7 @@ var RedmineToolbar= {
         url = host + "/my/page";
         break;
       case 'OVERVIEW':
-        url = host + "/projects/show/" + currProj + "";
+        url = host + "/projects/" + currProj + "";
         break;
       case 'ISSUES':
         url = host + "/projects/" + currProj + "/issues";
@@ -59,13 +59,13 @@ var RedmineToolbar= {
         url = host + "/projects/" + currProj + "/documents";
         break;
       case 'WIKI':
-        url = host + "/wiki/" + currProj + "";
+        url = host + "/projects/" + currProj + "/wiki";
         break;
       case 'FILES':
-        url = host + "/projects/list_files/" + currProj + "";
+        url = host + "/projects/" + currProj + "/files";
         break;
       case 'REPOSITORY':
-        url = host + "/repositories/show/" + currProj + "";
+        url = host + "/projects/" + currProj + "/repository";
         break;
       default:
         alert('No such page: ' + page);

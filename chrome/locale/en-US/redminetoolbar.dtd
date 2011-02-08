@@ -43,7 +43,7 @@
 <!ENTITY redminetoolbar.options.tabgeneral.label "General">
 
 <!-- General options tab -->
-<!ENTITY redminetoolbar.options.tabgeneral.projectname "Name">
+<!ENTITY redminetoolbar.options.tabgeneral.projectname "Project identifier">
 <!ENTITY redminetoolbar.options.tabgeneral.projecturl "URL">
 <!ENTITY redminetoolbar.options.tabgeneral.add "Add">
 <!ENTITY redminetoolbar.options.tabgeneral.remove "Remove">

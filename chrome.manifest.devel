@@ -1,5 +1,5 @@
-content redminetoolbar chrome/content/
-overlay chrome://browser/content/browser.xul chrome://redminetoolbar/content/redminetoolbar.xul
-skin redminetoolbar classic/1.0 chrome/skin/
-locale redminetoolbar en-US chrome/locale/en-US/
-locale redminetoolbar de-DE chrome/locale/de-DE/
+content planiotoolbar chrome/content/
+overlay chrome://browser/content/browser.xul chrome://planiotoolbar/content/redminetoolbar.xul
+skin planiotoolbar classic/1.0 chrome/skin/
+locale planiotoolbar en-US chrome/locale/en-US/
+locale planiotoolbar de-DE chrome/locale/de-DE/

@@ -3,8 +3,8 @@ var RedmineToolbar_Wikipages = {
   load : function() {
     const prefService = Components.classes["@mozilla.org/preferences-service;1"]
                                   .getService(Components.interfaces.nsIPrefService);
-	const curProj = prefService.getBranch("extensions.redminetoolbar.").getCharPref("currentproject");
-    const branch = prefService.getBranch("extensions.redminetoolbar.project." + curProj + ".wikipage.");
+	const curProj = prefService.getBranch("extensions.planiotoolbar.").getCharPref("currentproject");
+    const branch = prefService.getBranch("extensions.planiotoolbar.project." + curProj + ".wikipage.");
     
 	// List of projects
     var names = branch.getChildList("", {});
@@ -15,8 +15,8 @@ var RedmineToolbar_Wikipages = {
 
   save : function() {
     const prefService = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
-    const branch = prefService.getBranch("extensions.redminetoolbar.");
-	const curProj = prefService.getBranch("extensions.redminetoolbar.").getCharPref("currentproject");
+    const branch = prefService.getBranch("extensions.planiotoolbar.");
+	const curProj = prefService.getBranch("extensions.planiotoolbar.").getCharPref("currentproject");
  
     // Remove all wiki pages first ...  
     branch.deleteBranch("project." + curProj + ".wikipage");

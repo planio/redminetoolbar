@@ -6,7 +6,7 @@ var RedmineToolbar= {
   
   Init : function() {
     // Initialize and register preferences listener
-    RedmineToolbar.redmineToolbarPrefListener = new RedmineToolbar.PrefListener("extensions.redminetoolbar.",
+    RedmineToolbar.redmineToolbarPrefListener = new RedmineToolbar.PrefListener("extensions.planiotoolbar.",
       function(branch, name) {
         switch (name) {
           case "currentproject":
@@ -178,7 +178,7 @@ var RedmineToolbar= {
 
     var prefs = Components.classes["@mozilla.org/preferences-service;1"]
                  .getService(Components.interfaces.nsIPrefService);
-    var branch = prefs.getBranch("extensions.redminetoolbar.project." + RedmineToolbar.getPref("currentproject") + ".wikipage.");
+    var branch = prefs.getBranch("extensions.planiotoolbar.project." + RedmineToolbar.getPref("currentproject") + ".wikipage.");
     var children = branch.getChildList("", {});
 
     for (var j=children.length -1; j >= 0; j--) {
@@ -195,11 +195,11 @@ var RedmineToolbar= {
     var currentProject = RedmineToolbar.getPref('currentproject');
     var prefs = Components.classes["@mozilla.org/preferences-service;1"]
                   .getService(Components.interfaces.nsIPrefService);
-    var branch = prefs.getBranch("extensions.redminetoolbar.projects.name");
+    var branch = prefs.getBranch("extensions.planiotoolbar.projects.name");
     var children = branch.getChildList("", {});
     for (var i = 0; i < children.length; i++) {
-    if (prefs.getCharPref("extensions.redminetoolbar.projects.name." + i) == currentProject)
-      return prefs.getCharPref("extensions.redminetoolbar.projects.url." + i);
+    if (prefs.getCharPref("extensions.planiotoolbar.projects.name." + i) == currentProject)
+      return prefs.getCharPref("extensions.planiotoolbar.projects.url." + i);
     }
 	return "No project";
   },
@@ -207,7 +207,7 @@ var RedmineToolbar= {
   getPref : function(pref) {
     var prefs = Components.classes["@mozilla.org/preferences-service;1"]
                   .getService(Components.interfaces.nsIPrefService);
-    var branch = prefs.getBranch("extensions.redminetoolbar.");
+    var branch = prefs.getBranch("extensions.planiotoolbar.");
     return branch.getCharPref(pref);
   },
 
@@ -216,7 +216,7 @@ var RedmineToolbar= {
     
     var prefs = Components.classes["@mozilla.org/preferences-service;1"]
                   .getService(Components.interfaces.nsIPrefService);
-    var branch = prefs.getBranch("extensions.redminetoolbar.projects.name");
+    var branch = prefs.getBranch("extensions.planiotoolbar.projects.name");
     var children = branch.getChildList("", {});
 
     while (menu.hasChildNodes())
@@ -234,22 +234,22 @@ var RedmineToolbar= {
   Change_Project : function(projectName) {
     var prefs = Components.classes["@mozilla.org/preferences-service;1"]
                     .getService(Components.interfaces.nsIPrefService);
-    var branch = prefs.getBranch("extensions.redminetoolbar.");
+    var branch = prefs.getBranch("extensions.planiotoolbar.");
     branch.setCharPref("currentproject", projectName);
   },
 
   showOptions : function() {
-    var x = window.openDialog("chrome://redminetoolbar/content/options.xul",
+    var x = window.openDialog("chrome://planiotoolbar/content/options.xul",
       "Redmine Toolbar Options", "centerscreen=yes,chrome=yes,modal=yes,resizable=yes");
   },
   
   showWikipagesDialog : function() {
-    var x = window.openDialog("chrome://redminetoolbar/content/wikipages.xul",
+    var x = window.openDialog("chrome://planiotoolbar/content/wikipages.xul",
       "Redmine Toolbar Wikipages", "centerscreen=yes,chrome=yes,modal=yes,resizable=yes");
   },
   
   showAboutDialog : function() {
-    var x = window.openDialog("chrome://redminetoolbar/content/about.xul",
+    var x = window.openDialog("chrome://planiotoolbar/content/about.xul",
       "Redmine Toolbar About", "centerscreen=yes,chrome=yes,modal=yes,resizable=yes");
   },
 

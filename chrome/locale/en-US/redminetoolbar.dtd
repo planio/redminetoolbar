@@ -39,7 +39,7 @@
 <!ENTITY redminetoolbar.button.about.label "About...">
 
 <!-- Options dialog -->
-<!ENTITY redminetoolbar.options.window.title "Redmine Toolbar Options">
+<!ENTITY redminetoolbar.options.window.title "Planio Toolbar Options">
 <!ENTITY redminetoolbar.options.tabgeneral.label "General">
 
 <!-- General options tab -->
@@ -50,7 +50,7 @@
 <!ENTITY redminetoolbar.options.tabgeneral.removeall "Remove all">
 
 <!-- Wikipages dialog -->
-<!ENTITY redminetoolbar.wikipages.window.title "Redmine Toolbar Wiki Pages">
+<!ENTITY redminetoolbar.wikipages.window.title "Planio Toolbar Wiki Pages">
 <!ENTITY redminetoolbar.wikipages.help "Enter the name of the wiki page exactly as given in the wiki (CamelCase).">
 <!ENTITY redminetoolbar.wikipages.name "Name">
 <!ENTITY redminetoolbar.wikipages.add "Add">
@@ -58,5 +58,5 @@
 <!ENTITY redminetoolbar.wikipages.removeall "Remove all">
 
 <!-- About dialog -->
-<!ENTITY redminetoolbar.about.window.title "About Redmine Toolbar">
+<!ENTITY redminetoolbar.about.window.title "About Planio Toolbar">
 <!ENTITY redminetoolbar.about.author "Author">

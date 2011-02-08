@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<!DOCTYPE window SYSTEM "chrome://redminetoolbar/locale/redminetoolbar.dtd">
-<?xml-stylesheet href="chrome://redminetoolbar/content/about.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://planiotoolbar/locale/redminetoolbar.dtd">
+<?xml-stylesheet href="chrome://planiotoolbar/content/about.css" type="text/css"?>
 
 <dialog buttons="accept"
         id="RedmineToolbar-About-Dialog"
@@ -9,13 +9,13 @@
 
     <vbox id="RedmineToolbar-About-Details">
         <hbox>
-            <description class="RedmineToolbar-About-Name">Redmine Toolbar</description>
+            <description class="RedmineToolbar-About-Name">Planio Toolbar</description>
             <description class="RedmineToolbar-About-Name">0.8.1</description>
         </hbox>
         <description value="&redminetoolbar.about.author;" class="RedmineToolbar-About-Title"/>
-        <description>Michael Pietsch</description>
+        <description>Michael Pietsch, Jan Schulz-Hofen (Planio GmbH)</description>
         <description value="Homepage" class="RedmineToolbar-About-Title"/>
-        <description>http://www.mpietsch.com/redminetoolbar</description>
+        <description>http://plan.io</description>
     </vbox>
     <separator class="groove"/>
 </dialog>

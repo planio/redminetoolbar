@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<!DOCTYPE window SYSTEM "chrome://redminetoolbar/locale/redminetoolbar.dtd">
-<?xml-stylesheet href="chrome://redminetoolbar/skin/redminetoolbar.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://planiotoolbar/locale/redminetoolbar.dtd">
+<?xml-stylesheet href="chrome://planiotoolbar/skin/redminetoolbar.css" type="text/css"?>
 <overlay id="RedmineToolbar-Overlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-  <script type="application/x-javascript" src="chrome://redminetoolbar/content/redminetoolbar.js" />
+  <script type="application/x-javascript" src="chrome://planiotoolbar/content/redminetoolbar.js" />
   <script type="application/x-javascript">
     window.addEventListener("load", RedmineToolbar.Init, false);
     window.addEventListener("unload", RedmineToolbar.Exit, false);

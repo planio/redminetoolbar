@@ -2,7 +2,7 @@ var RedmineToolbar_Options = {
 
   load : function() {
     const prefService = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
-    const branch = prefService.getBranch("extensions.redminetoolbar.projects.");
+    const branch = prefService.getBranch("extensions.planiotoolbar.projects.");
 
     // List of projects
     var names = branch.getChildList("name.", {});
@@ -15,7 +15,7 @@ var RedmineToolbar_Options = {
 
   save : function() {
     const prefService = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
-    const branch = prefService.getBranch("extensions.redminetoolbar.");
+    const branch = prefService.getBranch("extensions.planiotoolbar.");
  
     // Remove all projects first ...  
     branch.deleteBranch("projects.name");
@@ -43,7 +43,7 @@ var RedmineToolbar_Options = {
   addToProjectList : function(name, url) {
     const prefService = Components.classes["@mozilla.org/preferences-service;1"]
                                   .getService(Components.interfaces.nsIPrefService);
-    const branch = prefService.getBranch("extensions.redminetoolbar.");
+    const branch = prefService.getBranch("extensions.planiotoolbar.");
     var projectList = document.getElementById("RedmineToolbar-Opt-Projects");
     var project = document.createElement("listitem");
     var pName = document.createElement("listcell");

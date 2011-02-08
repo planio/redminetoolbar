@@ -2,7 +2,7 @@
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:em="http://www.mozilla.org/2004/em-rdf#">
   <Description about="urn:mozilla:install-manifest">
-    <em:id>redminetoolbar@mpietsch.com</em:id>
+    <em:id>planiotoolbar@plan.io</em:id>
     <em:version>0.8.1</em:version>
     <em:type>2</em:type>
     <em:targetApplication>
@@ -12,12 +12,13 @@
         <em:maxVersion>4.0.*</em:maxVersion>
       </Description>
     </em:targetApplication>
-    <em:name>Redmine Toolbar</em:name>
-    <em:description>Toolbar for easy access to Redmine projects.</em:description>
-    <em:creator>Michael Pietsch</em:creator>
-    <em:homepageURL>http://www.mpietsch.com/redminetoolbar</em:homepageURL>
-    <em:aboutURL>chrome://redminetoolbar/content/about.xul</em:aboutURL>
-    <em:optionsURL>chrome://redminetoolbar/content/options.xul</em:optionsURL>
-    <em:iconURL>chrome://redminetoolbar/skin/redmine_icon.png</em:iconURL>
+		<!-- Front End MetaData -->
+    <em:name>Planio Toolbar</em:name>
+    <em:description>Toolbar for easy access to Planio projects.</em:description>
+    <em:creator>Michael Pietsch, Jan Schulz-Hofen (Planio GmbH)</em:creator>
+    <em:homepageURL>http://plan.io</em:homepageURL>
+    <em:aboutURL>chrome://planiotoolbar/content/about.xul</em:aboutURL>
+    <em:optionsURL>chrome://planiotoolbar/content/options.xul</em:optionsURL>
+    <em:iconURL>chrome://planiotoolbar/skin/planio32x32.png</em:iconURL>
   </Description>
 </RDF>

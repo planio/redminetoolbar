@@ -11,14 +11,14 @@
 <!ENTITY redminetoolbar.button.activity.label "Aktivitäten">
 <!ENTITY redminetoolbar.tooltip.activity "Gehe zur Aktivitäten-Seite">
 
-<!ENTITY redminetoolbar.button.issues.label "Tickets">
-<!ENTITY redminetoolbar.tooltip.issues "Gehe zu aktuellen Tickets">
+<!ENTITY redminetoolbar.button.issues.label "Aufgaben">
+<!ENTITY redminetoolbar.tooltip.issues "Gehe zu aktuellen Aufgaben">
 
-<!ENTITY redminetoolbar.button.newissue.label "Neues Ticket">
-<!ENTITY redminetoolbar.tooltip.newissue "Schreibe eine neues Ticket">
+<!ENTITY redminetoolbar.button.newissue.label "Neue Aufgabe">
+<!ENTITY redminetoolbar.tooltip.newissue "Erstelle eine neue Aufgabe">
 
-<!ENTITY redminetoolbar.button.news.label "Neuigkeiten">
-<!ENTITY redminetoolbar.tooltip.news "Gehe zu den Neuigkeiten">
+<!ENTITY redminetoolbar.button.news.label "News">
+<!ENTITY redminetoolbar.tooltip.news "Gehe zu den News">
 
 <!ENTITY redminetoolbar.button.docs.label "Dokumente">
 <!ENTITY redminetoolbar.tooltip.docs "Gehe zur Dokumentenseite">
@@ -39,7 +39,7 @@
 <!ENTITY redminetoolbar.button.about.label "Über...">
 
 <!-- Options dialog -->
-<!ENTITY redminetoolbar.options.window.title "Redmine Toolbar Optionen">
+<!ENTITY redminetoolbar.options.window.title "Planio Toolbar Optionen">
 <!ENTITY redminetoolbar.options.tabgeneral.label "Allgemein">
 
 <!-- General options tab -->
@@ -50,7 +50,7 @@
 <!ENTITY redminetoolbar.options.tabgeneral.removeall "Alle entfernen">
 
 <!-- Wikipages dialog -->
-<!ENTITY redminetoolbar.wikipages.window.title "Redmine Toolbar Wiki Seiten">
+<!ENTITY redminetoolbar.wikipages.window.title "Planio Toolbar Wiki Seiten">
 <!ENTITY redminetoolbar.wikipages.help "Geben Sie den Namen der Wiki-Seite genauso ein, wie er im Wiki steht (CamelCase).">
 <!ENTITY redminetoolbar.wikipages.name "Name">
 <!ENTITY redminetoolbar.wikipages.add "Hinzufügen">
@@ -58,5 +58,5 @@
 <!ENTITY redminetoolbar.wikipages.removeall "Alle entfernen">
 
 <!-- About dialog -->
-<!ENTITY redminetoolbar.about.window.title "Über Redmine Toolbar">
+<!ENTITY redminetoolbar.about.window.title "Über Planio Toolbar">
 <!ENTITY redminetoolbar.about.author "Autor">

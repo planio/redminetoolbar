@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
-<!DOCTYPE window SYSTEM "chrome://planiotoolbar/locale/redminetoolbar.dtd">
+<!DOCTYPE window SYSTEM "chrome://planiotoolbar/locale/planiotoolbar.dtd">
 <?xml-stylesheet href="chrome://planiotoolbar/content/about.css" type="text/css"?>
 
 <dialog buttons="accept"
-        id="RedmineToolbar-About-Dialog"
-        title="&redminetoolbar.about.window.title;"
+        id="PlanioToolbar-About-Dialog"
+        title="&planiotoolbar.about.window.title;"
         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-    <vbox id="RedmineToolbar-About-Details">
+    <vbox id="PlanioToolbar-About-Details">
         <hbox>
-            <description class="RedmineToolbar-About-Name">Planio Toolbar</description>
-            <description class="RedmineToolbar-About-Name">0.8.1</description>
+            <description class="PlanioToolbar-About-Name">Planio Toolbar</description>
+            <description class="PlanioToolbar-About-Name">0.8.1</description>
         </hbox>
-        <description value="&redminetoolbar.about.author;" class="RedmineToolbar-About-Title"/>
+        <description value="&planiotoolbar.about.author;" class="PlanioToolbar-About-Title"/>
         <description>Michael Pietsch, Jan Schulz-Hofen (Planio GmbH)</description>
-        <description value="Homepage" class="RedmineToolbar-About-Title"/>
+        <description value="Homepage" class="PlanioToolbar-About-Title"/>
         <description>http://plan.io</description>
     </vbox>
     <separator class="groove"/>

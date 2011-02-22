@@ -1,62 +1,62 @@
 <!-- Toolbar button labels and tooltips -->
-<!ENTITY redminetoolbar.button.project.label "Keine">
-<!ENTITY redminetoolbar.button.loading.label "Wird geladen...">
+<!ENTITY planiotoolbar.button.project.label "Keine">
+<!ENTITY planiotoolbar.button.loading.label "Wird geladen...">
 
-<!ENTITY redminetoolbar.button.mypage.label "Meine Seite">
-<!ENTITY redminetoolbar.tooltip.mypage "Gehe zu 'Meine Seite'">
+<!ENTITY planiotoolbar.button.mypage.label "Meine Seite">
+<!ENTITY planiotoolbar.tooltip.mypage "Gehe zu 'Meine Seite'">
 
-<!ENTITY redminetoolbar.button.overview.label "Übersicht">
-<!ENTITY redminetoolbar.tooltip.overview "Gehe zur Übersicht">
+<!ENTITY planiotoolbar.button.overview.label "Übersicht">
+<!ENTITY planiotoolbar.tooltip.overview "Gehe zur Übersicht">
 
-<!ENTITY redminetoolbar.button.activity.label "Aktivitäten">
-<!ENTITY redminetoolbar.tooltip.activity "Gehe zur Aktivitäten-Seite">
+<!ENTITY planiotoolbar.button.activity.label "Aktivitäten">
+<!ENTITY planiotoolbar.tooltip.activity "Gehe zur Aktivitäten-Seite">
 
-<!ENTITY redminetoolbar.button.issues.label "Aufgaben">
-<!ENTITY redminetoolbar.tooltip.issues "Gehe zu aktuellen Aufgaben">
+<!ENTITY planiotoolbar.button.issues.label "Aufgaben">
+<!ENTITY planiotoolbar.tooltip.issues "Gehe zu aktuellen Aufgaben">
 
-<!ENTITY redminetoolbar.button.newissue.label "Neue Aufgabe">
-<!ENTITY redminetoolbar.tooltip.newissue "Erstelle eine neue Aufgabe">
+<!ENTITY planiotoolbar.button.newissue.label "Neue Aufgabe">
+<!ENTITY planiotoolbar.tooltip.newissue "Erstelle eine neue Aufgabe">
 
-<!ENTITY redminetoolbar.button.news.label "News">
-<!ENTITY redminetoolbar.tooltip.news "Gehe zu den News">
+<!ENTITY planiotoolbar.button.news.label "News">
+<!ENTITY planiotoolbar.tooltip.news "Gehe zu den News">
 
-<!ENTITY redminetoolbar.button.docs.label "Dokumente">
-<!ENTITY redminetoolbar.tooltip.docs "Gehe zur Dokumentenseite">
+<!ENTITY planiotoolbar.button.docs.label "Dokumente">
+<!ENTITY planiotoolbar.tooltip.docs "Gehe zur Dokumentenseite">
 
-<!ENTITY redminetoolbar.button.wiki.label "Wiki">
-<!ENTITY redminetoolbar.tooltip.wiki "Gehe zum Wiki">
-<!ENTITY redminetoolbar.button.wikimainpage.label "Wiki Hauptseite">
-<!ENTITY redminetoolbar.button.wikiaddpage.label "Wikiseite editieren">
+<!ENTITY planiotoolbar.button.wiki.label "Wiki">
+<!ENTITY planiotoolbar.tooltip.wiki "Gehe zum Wiki">
+<!ENTITY planiotoolbar.button.wikimainpage.label "Wiki Hauptseite">
+<!ENTITY planiotoolbar.button.wikiaddpage.label "Wikiseite editieren">
 
-<!ENTITY redminetoolbar.button.files.label "Dateien">
-<!ENTITY redminetoolbar.tooltip.files "Gehe zu den Dateien">
+<!ENTITY planiotoolbar.button.files.label "Dateien">
+<!ENTITY planiotoolbar.tooltip.files "Gehe zu den Dateien">
 
-<!ENTITY redminetoolbar.button.repository.label "Projektarchiv">
-<!ENTITY redminetoolbar.tooltip.repository "Gehe zum Projektarchiv">
+<!ENTITY planiotoolbar.button.repository.label "Projektarchiv">
+<!ENTITY planiotoolbar.tooltip.repository "Gehe zum Projektarchiv">
 
-<!ENTITY redminetoolbar.button.options.label "Optionen">
-<!ENTITY redminetoolbar.tooltip.options "Optionen anzeigen">
-<!ENTITY redminetoolbar.button.about.label "Über...">
+<!ENTITY planiotoolbar.button.options.label "Optionen">
+<!ENTITY planiotoolbar.tooltip.options "Optionen anzeigen">
+<!ENTITY planiotoolbar.button.about.label "Über...">
 
 <!-- Options dialog -->
-<!ENTITY redminetoolbar.options.window.title "Planio Toolbar Optionen">
-<!ENTITY redminetoolbar.options.tabgeneral.label "Allgemein">
+<!ENTITY planiotoolbar.options.window.title "Planio Toolbar Optionen">
+<!ENTITY planiotoolbar.options.tabgeneral.label "Allgemein">
 
 <!-- General options tab -->
-<!ENTITY redminetoolbar.options.tabgeneral.projectname "Projekt-Kennung">
-<!ENTITY redminetoolbar.options.tabgeneral.projecturl "URL">
-<!ENTITY redminetoolbar.options.tabgeneral.add "Hinzufügen">
-<!ENTITY redminetoolbar.options.tabgeneral.remove "Entfernen">
-<!ENTITY redminetoolbar.options.tabgeneral.removeall "Alle entfernen">
+<!ENTITY planiotoolbar.options.tabgeneral.projectname "Projekt-Kennung">
+<!ENTITY planiotoolbar.options.tabgeneral.projecturl "URL">
+<!ENTITY planiotoolbar.options.tabgeneral.add "Hinzufügen">
+<!ENTITY planiotoolbar.options.tabgeneral.remove "Entfernen">
+<!ENTITY planiotoolbar.options.tabgeneral.removeall "Alle entfernen">
 
 <!-- Wikipages dialog -->
-<!ENTITY redminetoolbar.wikipages.window.title "Planio Toolbar Wiki Seiten">
-<!ENTITY redminetoolbar.wikipages.help "Geben Sie den Namen der Wiki-Seite genauso ein, wie er im Wiki steht (CamelCase).">
-<!ENTITY redminetoolbar.wikipages.name "Name">
-<!ENTITY redminetoolbar.wikipages.add "Hinzufügen">
-<!ENTITY redminetoolbar.wikipages.remove "Entfernen">
-<!ENTITY redminetoolbar.wikipages.removeall "Alle entfernen">
+<!ENTITY planiotoolbar.wikipages.window.title "Planio Toolbar Wiki Seiten">
+<!ENTITY planiotoolbar.wikipages.help "Geben Sie den Namen der Wiki-Seite genauso ein, wie er im Wiki steht (CamelCase).">
+<!ENTITY planiotoolbar.wikipages.name "Name">
+<!ENTITY planiotoolbar.wikipages.add "Hinzufügen">
+<!ENTITY planiotoolbar.wikipages.remove "Entfernen">
+<!ENTITY planiotoolbar.wikipages.removeall "Alle entfernen">
 
 <!-- About dialog -->
-<!ENTITY redminetoolbar.about.window.title "Über Planio Toolbar">
-<!ENTITY redminetoolbar.about.author "Autor">
+<!ENTITY planiotoolbar.about.window.title "Über Planio Toolbar">
+<!ENTITY planiotoolbar.about.author "Autor">

@@ -1,66 +1,66 @@
 <?xml version="1.0"?>
-<!DOCTYPE window SYSTEM "chrome://planiotoolbar/locale/redminetoolbar.dtd">
-<?xml-stylesheet href="chrome://planiotoolbar/skin/redminetoolbar.css" type="text/css"?>
-<overlay id="RedmineToolbar-Overlay"
+<!DOCTYPE window SYSTEM "chrome://planiotoolbar/locale/planiotoolbar.dtd">
+<?xml-stylesheet href="chrome://planiotoolbar/skin/planiotoolbar.css" type="text/css"?>
+<overlay id="PlanioToolbar-Overlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-  <script type="application/x-javascript" src="chrome://planiotoolbar/content/redminetoolbar.js" />
+  <script type="application/x-javascript" src="chrome://planiotoolbar/content/planiotoolbar.js" />
   <script type="application/x-javascript">
-    window.addEventListener("load", RedmineToolbar.Init, false);
-    window.addEventListener("unload", RedmineToolbar.Exit, false);
+    window.addEventListener("load", PlanioToolbar.Init, false);
+    window.addEventListener("unload", PlanioToolbar.Exit, false);
   </script>
 
   <toolbox id="navigator-toolbox">
-    <toolbar id="RedmineToolbar-Toolbar" toolbarname="Redmine Toolbar" accesskey="T"
+    <toolbar id="PlanioToolbar-Toolbar" toolbarname="Planio Toolbar" accesskey="T"
              class="chromeclass-toolbar" context="toolbar-context-menu" 
              hidden="false" persist="hidden">
-      <toolbarbutton id="RedmineToolbar-Project-Button" tooltiptext="Project Name"
-                     label="&redminetoolbar.button.project.label;" type="menu">
-        <menupopup id="RedmineToolbar-Project-Popup" onpopupshowing="RedmineToolbar.PopulateProjects();">
-          <menuitem label="&redminetoolbar.button.loading.label;" />
+      <toolbarbutton id="PlanioToolbar-Project-Button" tooltiptext="Project Name"
+                     label="&planiotoolbar.button.project.label;" type="menu">
+        <menupopup id="PlanioToolbar-Project-Popup" onpopupshowing="PlanioToolbar.PopulateProjects();">
+          <menuitem label="&planiotoolbar.button.loading.label;" />
         </menupopup>
       </toolbarbutton>
       <toolbarseparator />
-      <toolbarbutton id="RedmineToolbar-MyPage-Button" tooltiptext="&redminetoolbar.tooltip.mypage;"
-                     label="&redminetoolbar.button.mypage.label;" oncommand="RedmineToolbar.loadPage('MYPAGE');" />
+      <toolbarbutton id="PlanioToolbar-MyPage-Button" tooltiptext="&planiotoolbar.tooltip.mypage;"
+                     label="&planiotoolbar.button.mypage.label;" oncommand="PlanioToolbar.loadPage('MYPAGE');" />
       <toolbarseparator />
-      <toolbarbutton id="RedmineToolbar-Overview-Button" tooltiptext="&redminetoolbar.tooltip.overview;"
-                     label="&redminetoolbar.button.overview.label;" oncommand="RedmineToolbar.loadPage('OVERVIEW');" />
-      <toolbarbutton id="RedmineToolbar-Activity-Button" tooltiptext="&redminetoolbar.tooltip.activity;"
-                     label="&redminetoolbar.button.activity.label;" type="menu">
-        <menupopup id="RedmineToolbar-Activity-Popup" onpopupshowing="RedmineToolbar.PopulateActivities();">
+      <toolbarbutton id="PlanioToolbar-Overview-Button" tooltiptext="&planiotoolbar.tooltip.overview;"
+                     label="&planiotoolbar.button.overview.label;" oncommand="PlanioToolbar.loadPage('OVERVIEW');" />
+      <toolbarbutton id="PlanioToolbar-Activity-Button" tooltiptext="&planiotoolbar.tooltip.activity;"
+                     label="&planiotoolbar.button.activity.label;" type="menu">
+        <menupopup id="PlanioToolbar-Activity-Popup" onpopupshowing="PlanioToolbar.PopulateActivities();">
           <!-- menuitems are automatically generated -->
         </menupopup>
       </toolbarbutton>
-      <toolbarbutton id="RedmineToolbar-Issues-Button" tooltiptext="&redminetoolbar.tooltip.issues;"
-                     label="&redminetoolbar.button.issues.label;" oncommand="RedmineToolbar.loadPage('ISSUES');" />
-      <toolbarbutton id="RedmineToolbar-NewIssue-Button" tooltiptext="&redminetoolbar.tooltip.newissue;"
-                     label="&redminetoolbar.button.newissue.label;" oncommand="RedmineToolbar.loadPage('NEWISSUE');" />
-      <toolbarbutton id="RedmineToolbar-News-Button" tooltiptext="&redminetoolbar.tooltip.news;"
-                     label="&redminetoolbar.button.news.label;" oncommand="RedmineToolbar.loadPage('NEWS');" />
-      <toolbarbutton id="RedmineToolbar-Docs-Button" tooltiptext="&redminetoolbar.tooltip.docs;"
-                     label="&redminetoolbar.button.docs.label;" oncommand="RedmineToolbar.loadPage('DOCS');" />
-      <toolbarbutton id="RedmineToolbar-Wiki-Button" tooltiptext="&redminetoolbar.tooltip.wiki;"
-                     label="&redminetoolbar.button.wiki.label;" type="menu">
-        <menupopup id="RedmineToolbar-Wiki-Popup" onpopupshowing="RedmineToolbar.Wiki_Populate();">
+      <toolbarbutton id="PlanioToolbar-Issues-Button" tooltiptext="&planiotoolbar.tooltip.issues;"
+                     label="&planiotoolbar.button.issues.label;" oncommand="PlanioToolbar.loadPage('ISSUES');" />
+      <toolbarbutton id="PlanioToolbar-NewIssue-Button" tooltiptext="&planiotoolbar.tooltip.newissue;"
+                     label="&planiotoolbar.button.newissue.label;" oncommand="PlanioToolbar.loadPage('NEWISSUE');" />
+      <toolbarbutton id="PlanioToolbar-News-Button" tooltiptext="&planiotoolbar.tooltip.news;"
+                     label="&planiotoolbar.button.news.label;" oncommand="PlanioToolbar.loadPage('NEWS');" />
+      <toolbarbutton id="PlanioToolbar-Docs-Button" tooltiptext="&planiotoolbar.tooltip.docs;"
+                     label="&planiotoolbar.button.docs.label;" oncommand="PlanioToolbar.loadPage('DOCS');" />
+      <toolbarbutton id="PlanioToolbar-Wiki-Button" tooltiptext="&planiotoolbar.tooltip.wiki;"
+                     label="&planiotoolbar.button.wiki.label;" type="menu">
+        <menupopup id="PlanioToolbar-Wiki-Popup" onpopupshowing="PlanioToolbar.Wiki_Populate();">
           <!-- menuitems are automatically generated -->
-          <menuitem label="&redminetoolbar.button.wikimainpage.label;" oncommand="RedmineToolbar.loadPage('WIKI');" /> 
-          <menuitem label="&redminetoolbar.button.wikiaddpage.label;" oncommand="RedmineToolbar.showWikipagesDialog();" /> 
+          <menuitem label="&planiotoolbar.button.wikimainpage.label;" oncommand="PlanioToolbar.loadPage('WIKI');" /> 
+          <menuitem label="&planiotoolbar.button.wikiaddpage.label;" oncommand="PlanioToolbar.showWikipagesDialog();" /> 
             <menuseparator /> 
-            <menuitem label="&redminetoolbar.button.loading.label;" />
+            <menuitem label="&planiotoolbar.button.loading.label;" />
           </menupopup>
       </toolbarbutton>  
-      <toolbarbutton id="RedmineToolbar-Files-Button" tooltiptext="&redminetoolbar.tooltip.files;"
-                     label="&redminetoolbar.button.files.label;" oncommand="RedmineToolbar.loadPage('FILES');" />
-      <toolbarbutton id="RedmineToolbar-Repository-Button" tooltiptext="&redminetoolbar.tooltip.repository;"
-                     label="&redminetoolbar.button.repository.label;" oncommand="RedmineToolbar.loadPage('REPOSITORY');" />
+      <toolbarbutton id="PlanioToolbar-Files-Button" tooltiptext="&planiotoolbar.tooltip.files;"
+                     label="&planiotoolbar.button.files.label;" oncommand="PlanioToolbar.loadPage('FILES');" />
+      <toolbarbutton id="PlanioToolbar-Repository-Button" tooltiptext="&planiotoolbar.tooltip.repository;"
+                     label="&planiotoolbar.button.repository.label;" oncommand="PlanioToolbar.loadPage('REPOSITORY');" />
       <toolbarspring />
-      <toolbarbutton id="RedmineToolbar-Options-Button" tooltiptext="&redminetoolbar.tooltip.options;"
-                     label="&redminetoolbar.button.options.label;" type="menu">
-        <menupopup id="RedmineToolbar-Options-Popup">
-          <menuitem label="&redminetoolbar.button.options.label;" oncommand="RedmineToolbar.showOptions();" /> 
+      <toolbarbutton id="PlanioToolbar-Options-Button" tooltiptext="&planiotoolbar.tooltip.options;"
+                     label="&planiotoolbar.button.options.label;" type="menu">
+        <menupopup id="PlanioToolbar-Options-Popup">
+          <menuitem label="&planiotoolbar.button.options.label;" oncommand="PlanioToolbar.showOptions();" /> 
           <menuseparator /> 
-          <menuitem label="&redminetoolbar.button.about.label;" oncommand="RedmineToolbar.showAboutDialog();" />
+          <menuitem label="&planiotoolbar.button.about.label;" oncommand="PlanioToolbar.showAboutDialog();" />
         </menupopup>
      </toolbarbutton>
    </toolbar>

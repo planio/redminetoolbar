@@ -1,5 +1,5 @@
 content planiotoolbar chrome/content/
-overlay chrome://browser/content/browser.xul chrome://planiotoolbar/content/redminetoolbar.xul
+overlay chrome://browser/content/browser.xul chrome://planiotoolbar/content/planiotoolbar.xul
 skin planiotoolbar classic/1.0 chrome/skin/
 locale planiotoolbar en-US chrome/locale/en-US/
 locale planiotoolbar de-DE chrome/locale/de-DE/

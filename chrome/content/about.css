@@ -1,20 +1,20 @@
 @import url("chrome://global/skin/");
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-#RedmineToolbar-About-Details {
+#PlanioToolbar-About-Details {
   color: #000000 !important;
   padding: 0.5em !important;
 }
 
-.RedmineToolbar-About-Name {
+.PlanioToolbar-About-Name {
   font-size: x-large !important;
   padding-right: 0.25em !important;
 }
 
-.RedmineToolbar-About-Title {
+.PlanioToolbar-About-Title {
   padding-top: 0.25em !important;
 }
 
-.RedmineToolbar-About-Name, .RedmineToolbar-About-Title {
+.PlanioToolbar-About-Name, .PlanioToolbar-About-Title {
   font-weight: bold !important;
 }

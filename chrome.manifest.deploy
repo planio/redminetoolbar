@@ -1,5 +1,5 @@
 content planiotoolbar jar:chrome/planiotoolbar.jar!/content/
-overlay chrome://browser/content/browser.xul chrome://planiotoolbar/content/redminetoolbar.xul
+overlay chrome://browser/content/browser.xul chrome://planiotoolbar/content/planiotoolbar.xul
 skin planiotoolbar classic/1.0 jar:chrome/planiotoolbar.jar!/skin/
 locale planiotoolbar en-US jar:chrome/planiotoolbar.jar!/locale/en-US/
 locale planiotoolbar de-DE jar:chrome/planiotoolbar.jar!/locale/de-DE/

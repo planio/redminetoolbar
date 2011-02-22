@@ -1,29 +1,29 @@
-var RedmineToolbar= {
+var PlanioToolbar= {
 
   urlExists : false,
 
-  redmineToolbarPrefListener : null,
+  planioToolbarPrefListener : null,
   
   Init : function() {
     // Initialize and register preferences listener
-    RedmineToolbar.redmineToolbarPrefListener = new RedmineToolbar.PrefListener("extensions.planiotoolbar.",
+    PlanioToolbar.planioToolbarPrefListener = new PlanioToolbar.PrefListener("extensions.planiotoolbar.",
       function(branch, name) {
         switch (name) {
           case "currentproject":
-            RedmineToolbar.Change_Project_Label(); 
+            PlanioToolbar.Change_Project_Label(); 
             break;
         }
     });
-    RedmineToolbar.redmineToolbarPrefListener.register();
+    PlanioToolbar.planioToolbarPrefListener.register();
     
     // Set the project title to be the current project title
-    RedmineToolbar.Change_Project_Label();
+    PlanioToolbar.Change_Project_Label();
   },
 
   Change_Project_Label : function() {
-    var projButton = document.getElementById('RedmineToolbar-Project-Button');
+    var projButton = document.getElementById('PlanioToolbar-Project-Button');
     if (projButton)
-       projButton.setAttribute('label', RedmineToolbar.getPref('currentproject'));
+       projButton.setAttribute('label', PlanioToolbar.getPref('currentproject'));
   },
 
   Exit : function() {
@@ -36,8 +36,8 @@ var RedmineToolbar= {
 
   loadPage : function(page) {
     var url = "";
-    var host = RedmineToolbar.getProjectUrl();
-    var currProj = RedmineToolbar.getPref('currentproject');
+    var host = PlanioToolbar.getProjectUrl();
+    var currProj = PlanioToolbar.getPref('currentproject');
     
     switch(page) {
       case 'MYPAGE':
@@ -70,7 +70,7 @@ var RedmineToolbar= {
       default:
         alert('No such page: ' + page);
     }
-    RedmineToolbar.loadUrl(url);
+    PlanioToolbar.loadUrl(url);
   },
 
   getFeed : function(url) {
@@ -79,7 +79,7 @@ var RedmineToolbar= {
     xhr.onreadystatechange = function() {
       if(xhr.readyState == 4) {
         if(xhr.status == 200) {
-          RedmineToolbar.Populate(xhr.responseXML);
+          PlanioToolbar.Populate(xhr.responseXML);
         }
       }
     }
@@ -87,14 +87,14 @@ var RedmineToolbar= {
   },
 
   PopulateActivities : function() {
-    var host = RedmineToolbar.getProjectUrl();
-    var currProj = RedmineToolbar.getPref('currentproject');
+    var host = PlanioToolbar.getProjectUrl();
+    var currProj = PlanioToolbar.getPref('currentproject');
     var url = host + "/projects/activity/" + currProj + "?format=atom";
-    if (RedmineToolbar.UrlExists(url)) {
-			RedmineToolbar.getFeed(url);
+    if (PlanioToolbar.UrlExists(url)) {
+			PlanioToolbar.getFeed(url);
 		} else {
 			url = host + "/projects/" + currProj + "/activity.atom";
-			RedmineToolbar.getFeed(url);
+			PlanioToolbar.getFeed(url);
 		}
   },
 
@@ -104,12 +104,12 @@ var RedmineToolbar= {
 		xhr.onreadystatechange = function() {
 			if (xhr.readyState == 4) {
 			  if (xhr.status == 200) {
-					RedmineToolbar.urlExists = true;
+					PlanioToolbar.urlExists = true;
 				}
 			}
 		}
 		xhr.send(null);
-		return RedmineToolbar.urlExists;
+		return PlanioToolbar.urlExists;
 	},
 
   Populate : function(doc) {
@@ -117,7 +117,7 @@ var RedmineToolbar= {
     const MAXENTRIES = 30;
 
     // Get the menupopup element that we will be working with
-    var menu = document.getElementById("RedmineToolbar-Activity-Popup");
+    var menu = document.getElementById("PlanioToolbar-Activity-Popup");
 
     // Remove all exisiting items first, otherwise the newly created items
     // are appended to the list
@@ -142,20 +142,20 @@ var RedmineToolbar= {
       tempItem.setAttribute("label", title);
       
       // Add a menu icon
-      if (RedmineToolbar.StartsWith(title, "Wiki edit"))
-        tempItem.setAttribute("class", "RedmineToolbar-Activity-Wiki-Edit");
-      else if (RedmineToolbar.StartsWith(title, "Revision")) 
-        tempItem.setAttribute("class", "RedmineToolbar-Activity-Changeset");
-      else if (RedmineToolbar.StartsWith(title, "Feature")) 
-        tempItem.setAttribute("class", "RedmineToolbar-Activity-Feature");
-      else if (RedmineToolbar.StartsWith(title, "Patch")) 
-        tempItem.setAttribute("class", "RedmineToolbar-Activity-Patch");
+      if (PlanioToolbar.StartsWith(title, "Wiki edit"))
+        tempItem.setAttribute("class", "PlanioToolbar-Activity-Wiki-Edit");
+      else if (PlanioToolbar.StartsWith(title, "Revision")) 
+        tempItem.setAttribute("class", "PlanioToolbar-Activity-Changeset");
+      else if (PlanioToolbar.StartsWith(title, "Feature")) 
+        tempItem.setAttribute("class", "PlanioToolbar-Activity-Feature");
+      else if (PlanioToolbar.StartsWith(title, "Patch")) 
+        tempItem.setAttribute("class", "PlanioToolbar-Activity-Patch");
 
       // get the URL from the feed entry
       var url = entryItem.getElementsByTagName('link')[0].getAttribute('href');
 
       // Set the new menu item's action
-      tempItem.setAttribute("oncommand", "RedmineToolbar.loadUrl('" + url + "');");
+      tempItem.setAttribute("oncommand", "PlanioToolbar.loadUrl('" + url + "');");
 
       // Add the item to out menu
       menu.appendChild(tempItem);
@@ -167,7 +167,7 @@ var RedmineToolbar= {
   },
 
   Wiki_Populate : function() {
-    var menu = document.getElementById("RedmineToolbar-Wiki-Popup");
+    var menu = document.getElementById("PlanioToolbar-Wiki-Popup");
 
     // Remove all exisiting items first, otherwise the newly created items
     // are appended to the list. Skip 
@@ -178,21 +178,21 @@ var RedmineToolbar= {
 
     var prefs = Components.classes["@mozilla.org/preferences-service;1"]
                  .getService(Components.interfaces.nsIPrefService);
-    var branch = prefs.getBranch("extensions.planiotoolbar.project." + RedmineToolbar.getPref("currentproject") + ".wikipage.");
+    var branch = prefs.getBranch("extensions.planiotoolbar.project." + PlanioToolbar.getPref("currentproject") + ".wikipage.");
     var children = branch.getChildList("", {});
 
     for (var j=children.length -1; j >= 0; j--) {
-      var link = RedmineToolbar.getProjectUrl() + '/wiki/' + RedmineToolbar.getPref('currentproject') + '/' + branch.getCharPref(children[j]);
+      var link = PlanioToolbar.getProjectUrl() + '/wiki/' + PlanioToolbar.getPref('currentproject') + '/' + branch.getCharPref(children[j]);
       var tempItem = document.createElement("menuitem");
       tempItem.setAttribute("label", branch.getCharPref(children[j]));
-      var link = RedmineToolbar.getProjectUrl() + '/wiki/' + RedmineToolbar.getPref('currentproject') + '/' + branch.getCharPref(children[j]);
-      tempItem.setAttribute("oncommand", "RedmineToolbar.loadUrl('" + link + "');");
+      var link = PlanioToolbar.getProjectUrl() + '/wiki/' + PlanioToolbar.getPref('currentproject') + '/' + branch.getCharPref(children[j]);
+      tempItem.setAttribute("oncommand", "PlanioToolbar.loadUrl('" + link + "');");
       menu.appendChild(tempItem);
     }
   },
 
   getProjectUrl : function() {
-    var currentProject = RedmineToolbar.getPref('currentproject');
+    var currentProject = PlanioToolbar.getPref('currentproject');
     var prefs = Components.classes["@mozilla.org/preferences-service;1"]
                   .getService(Components.interfaces.nsIPrefService);
     var branch = prefs.getBranch("extensions.planiotoolbar.projects.name");
@@ -212,7 +212,7 @@ var RedmineToolbar= {
   },
 
   PopulateProjects : function() {
-    var menu = document.getElementById("RedmineToolbar-Project-Popup");
+    var menu = document.getElementById("PlanioToolbar-Project-Popup");
     
     var prefs = Components.classes["@mozilla.org/preferences-service;1"]
                   .getService(Components.interfaces.nsIPrefService);
@@ -226,7 +226,7 @@ var RedmineToolbar= {
       var tempItem = document.createElement("menuitem");
       var projectName = branch.getCharPref(children[i]);
       tempItem.setAttribute("label", projectName);
-      tempItem.setAttribute("oncommand", "RedmineToolbar.Change_Project('" + projectName + "');");
+      tempItem.setAttribute("oncommand", "PlanioToolbar.Change_Project('" + projectName + "');");
       menu.appendChild(tempItem);
     }
   },
@@ -240,17 +240,17 @@ var RedmineToolbar= {
 
   showOptions : function() {
     var x = window.openDialog("chrome://planiotoolbar/content/options.xul",
-      "Redmine Toolbar Options", "centerscreen=yes,chrome=yes,modal=yes,resizable=yes");
+      "Planio Toolbar Options", "centerscreen=yes,chrome=yes,modal=yes,resizable=yes");
   },
   
   showWikipagesDialog : function() {
     var x = window.openDialog("chrome://planiotoolbar/content/wikipages.xul",
-      "Redmine Toolbar Wikipages", "centerscreen=yes,chrome=yes,modal=yes,resizable=yes");
+      "Planio Toolbar Wikipages", "centerscreen=yes,chrome=yes,modal=yes,resizable=yes");
   },
   
   showAboutDialog : function() {
     var x = window.openDialog("chrome://planiotoolbar/content/about.xul",
-      "Redmine Toolbar About", "centerscreen=yes,chrome=yes,modal=yes,resizable=yes");
+      "Planio Toolbar About", "centerscreen=yes,chrome=yes,modal=yes,resizable=yes");
   },
 
   PrefListener : function(branchName, func) {
@@ -276,4 +276,4 @@ var RedmineToolbar= {
       };
   }
 
-}; // End of RedmineToolbar
+}; // End of PlanioToolbar

@@ -1,55 +1,55 @@
-#RedmineToolbar-Project-Button {
+#PlanioToolbar-Project-Button {
   list-style-image: url("chrome://planiotoolbar/skin/planio16x16.png");
 }
-#RedmineToolbar-MyPage-Button {
+#PlanioToolbar-MyPage-Button {
   list-style-image: url("chrome://planiotoolbar/skin/house.png");
 }
-#RedmineToolbar-Overview-Button {
+#PlanioToolbar-Overview-Button {
   list-style-image: url("chrome://planiotoolbar/skin/world_orbit.png");
 }
-#RedmineToolbar-Activity-Button {
+#PlanioToolbar-Activity-Button {
   list-style-image: url("chrome://planiotoolbar/skin/sport_soccer.png");
 }
-#RedmineToolbar-Issues-Button {
+#PlanioToolbar-Issues-Button {
   list-style-image: url("chrome://planiotoolbar/skin/bug.png");
 }
-#RedmineToolbar-NewIssue-Button {
+#PlanioToolbar-NewIssue-Button {
   list-style-image: url("chrome://planiotoolbar/skin/bug_add.png");
 }
-#RedmineToolbar-News-Button {
+#PlanioToolbar-News-Button {
   list-style-image: url("chrome://planiotoolbar/skin/rss.png");
 }
-#RedmineToolbar-Docs-Button {
+#PlanioToolbar-Docs-Button {
   list-style-image: url("chrome://planiotoolbar/skin/page_white_word.png");
 }
-#RedmineToolbar-Wiki-Button {
+#PlanioToolbar-Wiki-Button {
   list-style-image: url("chrome://planiotoolbar/skin/user_comment.png");
 }
-#RedmineToolbar-Files-Button {
+#PlanioToolbar-Files-Button {
   list-style-image: url("chrome://planiotoolbar/skin/folder.png");
 }
-#RedmineToolbar-Repository-Button {
+#PlanioToolbar-Repository-Button {
   list-style-image: url("chrome://planiotoolbar/skin/database_refresh.png");
 }
-#RedmineToolbar-Options-Button {
+#PlanioToolbar-Options-Button {
   list-style-image: url("chrome://planiotoolbar/skin/wrench.png");
 }
-.RedmineToolbar-Activity-Wiki-Edit {
+.PlanioToolbar-Activity-Wiki-Edit {
   -moz-binding: url("chrome://global/content/bindings/menu.xml#menuitem-iconic");
   list-style-image: url("chrome://planiotoolbar/skin/wiki_edit.png");
   -moz-image-region: rect(0px 16px 16px 0px);
 }
-.RedmineToolbar-Activity-Changeset {
+.PlanioToolbar-Activity-Changeset {
   -moz-binding: url("chrome://global/content/bindings/menu.xml#menuitem-iconic");
   list-style-image: url("chrome://planiotoolbar/skin/changeset.png");
   -moz-image-region: rect(0px 16px 16px 0px);
 }
-.RedmineToolbar-Activity-Feature {
+.PlanioToolbar-Activity-Feature {
   -moz-binding: url("chrome://global/content/bindings/menu.xml#menuitem-iconic");
   list-style-image: url("chrome://planiotoolbar/skin/ticket.png");
   -moz-image-region: rect(0px 16px 16px 0px);
 }
-.RedmineToolbar-Activity-Patch {
+.PlanioToolbar-Activity-Patch {
   -moz-binding: url("chrome://global/content/bindings/menu.xml#menuitem-iconic");
   list-style-image: url("chrome://planiotoolbar/skin/ticket_checked.png");
   -moz-image-region: rect(0px 16px 16px 0px);

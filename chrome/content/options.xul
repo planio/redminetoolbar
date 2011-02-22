@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
-<!DOCTYPE window SYSTEM "chrome://planiotoolbar/locale/redminetoolbar.dtd">
+<!DOCTYPE window SYSTEM "chrome://planiotoolbar/locale/planiotoolbar.dtd">
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
 <?xml-stylesheet href="chrome://mozapps/skin/pref/pref.css" type="text/css"?>
 
-<dialog id="RedmineToolbar-Options-Dialog"
+<dialog id="PlanioToolbar-Options-Dialog"
         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
         buttons="accept, cancel"
         orient="vertical"
-        ondialogaccept="RedmineToolbar_Options.save()"
-        onload="RedmineToolbar_Options.load()"
-        title="&redminetoolbar.options.window.title;"
+        ondialogaccept="PlanioToolbar_Options.save()"
+        onload="PlanioToolbar_Options.load()"
+        title="&planiotoolbar.options.window.title;"
         width="600"
         height="400">
 
@@ -17,11 +17,11 @@
 
   <tabbox flex="1">
     <tabs>
-      <tab label="&redminetoolbar.options.tabgeneral.label;" />
+      <tab label="&planiotoolbar.options.tabgeneral.label;" />
     </tabs>
 
     <tabpanels flex="1">
-      <tabpanel id="RedmineToolbar-OptTab-General" orient="vertical">
+      <tabpanel id="PlanioToolbar-OptTab-General" orient="vertical">
         <vbox flex="1">
           <hbox>
             <grid flex="1">
@@ -31,24 +31,24 @@
               </columns>
               <rows>
                 <row>
-                  <label control="RedmineToolbar-Opt-AddEditName" value="&redminetoolbar.options.tabgeneral.projectname;" />
-                  <textbox id="RedmineToolbar-Opt-AddEditName" />
+                  <label control="PlanioToolbar-Opt-AddEditName" value="&planiotoolbar.options.tabgeneral.projectname;" />
+                  <textbox id="PlanioToolbar-Opt-AddEditName" />
                 </row>
                 <row>
-                  <label control="RedmineToolbar-Opt-AddEditUrl" value="&redminetoolbar.options.tabgeneral.projecturl;" />
-                  <textbox id="RedmineToolbar-Opt-AddEditUrl" />
+                  <label control="PlanioToolbar-Opt-AddEditUrl" value="&planiotoolbar.options.tabgeneral.projecturl;" />
+                  <textbox id="PlanioToolbar-Opt-AddEditUrl" />
                 </row>
               </rows>
             </grid>
           </hbox>
           <hbox pack="end">
-            <button label="&redminetoolbar.options.tabgeneral.add;" oncommand="RedmineToolbar_Options.addOrEditProject();" />
+            <button label="&planiotoolbar.options.tabgeneral.add;" oncommand="PlanioToolbar_Options.addOrEditProject();" />
           </hbox>
           <vbox flex="1">
-            <listbox id="RedmineToolbar-Opt-Projects" flex="1">
+            <listbox id="PlanioToolbar-Opt-Projects" flex="1">
               <listhead>
-                <listheader label="&redminetoolbar.options.tabgeneral.projectname;" />
-                <listheader label="&redminetoolbar.options.tabgeneral.projecturl;" />
+                <listheader label="&planiotoolbar.options.tabgeneral.projectname;" />
+                <listheader label="&planiotoolbar.options.tabgeneral.projecturl;" />
               </listhead>
               <listcols>
                 <listcol />
@@ -57,8 +57,8 @@
             </listbox> 
           </vbox>
           <hbox pack="end">
-            <button label="&redminetoolbar.options.tabgeneral.remove;" oncommand="RedmineToolbar_Options.removeProject();" />
-            <button label="&redminetoolbar.options.tabgeneral.removeall;" oncommand="RedmineToolbar_Options.removeAllProjects();" />
+            <button label="&planiotoolbar.options.tabgeneral.remove;" oncommand="PlanioToolbar_Options.removeProject();" />
+            <button label="&planiotoolbar.options.tabgeneral.removeall;" oncommand="PlanioToolbar_Options.removeAllProjects();" />
           </hbox>
         </vbox>
       </tabpanel>

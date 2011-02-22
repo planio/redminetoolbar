@@ -10,7 +10,7 @@
     <vbox id="PlanioToolbar-About-Details">
         <hbox>
             <description class="PlanioToolbar-About-Name">Planio Toolbar</description>
-            <description class="PlanioToolbar-About-Name">0.8.1</description>
+            <description class="PlanioToolbar-About-Name">0.8.1a</description>
         </hbox>
         <description value="&planiotoolbar.about.author;" class="PlanioToolbar-About-Title"/>
         <description>Michael Pietsch, Jan Schulz-Hofen (Planio GmbH)</description>

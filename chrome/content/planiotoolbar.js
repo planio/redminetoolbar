@@ -155,7 +155,7 @@ var PlanioToolbar= {
       var url = entryItem.getElementsByTagName('link')[0].getAttribute('href');
 
       // Set the new menu item's action
-      tempItem.setAttribute("oncommand", "PlanioToolbar.loadUrl('" + url + "');");
+			tempItem.oncommand = function () { PlanioToolbar.loadUrl(url); };
 
       // Add the item to out menu
       menu.appendChild(tempItem);
@@ -186,7 +186,7 @@ var PlanioToolbar= {
       var tempItem = document.createElement("menuitem");
       tempItem.setAttribute("label", branch.getCharPref(children[j]));
       var link = PlanioToolbar.getProjectUrl() + '/wiki/' + PlanioToolbar.getPref('currentproject') + '/' + branch.getCharPref(children[j]);
-      tempItem.setAttribute("oncommand", "PlanioToolbar.loadUrl('" + link + "');");
+			tempItem.oncommand = function () { PlanioToolbar.loadUrl(link); };
       menu.appendChild(tempItem);
     }
   },
@@ -226,7 +226,7 @@ var PlanioToolbar= {
       var tempItem = document.createElement("menuitem");
       var projectName = branch.getCharPref(children[i]);
       tempItem.setAttribute("label", projectName);
-      tempItem.setAttribute("oncommand", "PlanioToolbar.Change_Project('" + projectName + "');");
+			tempItem.oncommand = function () { PlanioToolbar.Change_Project(projectName); };
       menu.appendChild(tempItem);
     }
   },

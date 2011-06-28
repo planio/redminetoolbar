@@ -44,7 +44,7 @@
 
 <!-- General options tab -->
 <!ENTITY planiotoolbar.options.tabgeneral.projectname "Project identifier">
-<!ENTITY planiotoolbar.options.tabgeneral.projecturl "URL">
+<!ENTITY planiotoolbar.options.tabgeneral.projecturl "URL (incl. https://)">
 <!ENTITY planiotoolbar.options.tabgeneral.add "Add">
 <!ENTITY planiotoolbar.options.tabgeneral.remove "Remove">
 <!ENTITY planiotoolbar.options.tabgeneral.removeall "Remove all">

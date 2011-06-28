@@ -23,7 +23,7 @@ var PlanioToolbar= {
   Change_Project_Label : function() {
     var projButton = document.getElementById('PlanioToolbar-Project-Button');
     if (projButton)
-       projButton.setAttribute('label', PlanioToolbar.getPref('currentproject'));
+       projButton.setAttribute('label', PlanioToolbar.getPref('currentproject') || 'No Project configured');
   },
 
   Exit : function() {
@@ -37,40 +37,44 @@ var PlanioToolbar= {
   loadPage : function(page) {
     var url = "";
     var host = PlanioToolbar.getProjectUrl();
-    var currProj = PlanioToolbar.getPref('currentproject');
+    if(host){
+      var currProj = PlanioToolbar.getPref('currentproject');
     
-    switch(page) {
-      case 'MYPAGE':
-        url = host + "/my/page";
-        break;
-      case 'OVERVIEW':
-        url = host + "/projects/" + currProj + "";
-        break;
-      case 'ISSUES':
-        url = host + "/projects/" + currProj + "/issues";
-        break;
-      case 'NEWISSUE':
-        url = host + "/projects/" + currProj + "/issues/new";
-        break;
-      case 'NEWS':
-        url = host + "/projects/" + currProj + "/news";
-        break;
-      case 'DOCS':
-        url = host + "/projects/" + currProj + "/documents";
-        break;
-      case 'WIKI':
-        url = host + "/projects/" + currProj + "/wiki";
-        break;
-      case 'FILES':
-        url = host + "/projects/" + currProj + "/files";
-        break;
-      case 'REPOSITORY':
-        url = host + "/projects/" + currProj + "/repository";
-        break;
-      default:
-        alert('No such page: ' + page);
+      switch(page) {
+        case 'MYPAGE':
+          url = host + "/my/page";
+          break;
+        case 'OVERVIEW':
+          url = host + "/projects/" + currProj + "";
+          break;
+        case 'ISSUES':
+          url = host + "/projects/" + currProj + "/issues";
+          break;
+        case 'NEWISSUE':
+          url = host + "/projects/" + currProj + "/issues/new";
+          break;
+        case 'NEWS':
+          url = host + "/projects/" + currProj + "/news";
+          break;
+        case 'DOCS':
+          url = host + "/projects/" + currProj + "/documents";
+          break;
+        case 'WIKI':
+          url = host + "/projects/" + currProj + "/wiki";
+          break;
+        case 'FILES':
+          url = host + "/projects/" + currProj + "/files";
+          break;
+        case 'REPOSITORY':
+          url = host + "/projects/" + currProj + "/repository";
+          break;
+        default:
+          alert('No such page: ' + page);
+      }
+      PlanioToolbar.loadUrl(url);
+    }else{
+      PlanioToolbar.showOptions();
     }
-    PlanioToolbar.loadUrl(url);
   },
 
   getFeed : function(url) {
@@ -88,13 +92,17 @@ var PlanioToolbar= {
 
   PopulateActivities : function() {
     var host = PlanioToolbar.getProjectUrl();
-    var currProj = PlanioToolbar.getPref('currentproject');
-    var url = host + "/projects/activity/" + currProj + "?format=atom";
-    if (PlanioToolbar.UrlExists(url)) {
-			PlanioToolbar.getFeed(url);
-		} else {
-			url = host + "/projects/" + currProj + "/activity.atom";
-			PlanioToolbar.getFeed(url);
+    if(host){
+      var currProj = PlanioToolbar.getPref('currentproject');
+      var url = host + "/projects/activity/" + currProj + "?format=atom";
+      if (PlanioToolbar.UrlExists(url)) {
+  			PlanioToolbar.getFeed(url);
+  		} else {
+  			url = host + "/projects/" + currProj + "/activity.atom";
+  			PlanioToolbar.getFeed(url);
+  		}
+		}else{
+      PlanioToolbar.showOptions();
 		}
   },
 
@@ -168,28 +176,33 @@ var PlanioToolbar= {
   },
 
   Wiki_Populate : function() {
-    var menu = document.getElementById("PlanioToolbar-Wiki-Popup");
+    if(PlanioToolbar.getProjectUrl()){
+    
+      var menu = document.getElementById("PlanioToolbar-Wiki-Popup");
 
-    // Remove all exisiting items first, otherwise the newly created items
-    // are appended to the list. Skip 
-    var skipEntries = 3;
-    for (var i=menu.childNodes.length - 1; i >= skipEntries; i--) {
-      menu.removeChild(menu.childNodes.item(i));
-    }
+      // Remove all exisiting items first, otherwise the newly created items
+      // are appended to the list. Skip 
+      var skipEntries = 3;
+      for (var i=menu.childNodes.length - 1; i >= skipEntries; i--) {
+        menu.removeChild(menu.childNodes.item(i));
+      }
 
-    var prefs = Components.classes["@mozilla.org/preferences-service;1"]
-                 .getService(Components.interfaces.nsIPrefService);
-    var branch = prefs.getBranch("extensions.planiotoolbar.project." + PlanioToolbar.getPref("currentproject") + ".wikipage.");
-    var children = branch.getChildList("", {});
+      var prefs = Components.classes["@mozilla.org/preferences-service;1"]
+                   .getService(Components.interfaces.nsIPrefService);
+      var branch = prefs.getBranch("extensions.planiotoolbar.project." + PlanioToolbar.getPref("currentproject") + ".wikipage.");
+      var children = branch.getChildList("", {});
 
-    for (var j=children.length -1; j >= 0; j--) {
-      var link = PlanioToolbar.getProjectUrl() + '/wiki/' + PlanioToolbar.getPref('currentproject') + '/' + branch.getCharPref(children[j]);
-      var tempItem = document.createElement("menuitem");
-      tempItem.setAttribute("label", branch.getCharPref(children[j]));
-      var link = PlanioToolbar.getProjectUrl() + '/wiki/' + PlanioToolbar.getPref('currentproject') + '/' + branch.getCharPref(children[j]);
-      tempItem.setAttribute("href", link);
-      tempItem.setAttribute("oncommand", "PlanioToolbar.loadUrl(this.getAttribute('href'));");
-      menu.appendChild(tempItem);
+      for (var j=children.length -1; j >= 0; j--) {
+        var link = PlanioToolbar.getProjectUrl() + '/wiki/' + PlanioToolbar.getPref('currentproject') + '/' + branch.getCharPref(children[j]);
+        var tempItem = document.createElement("menuitem");
+        tempItem.setAttribute("label", branch.getCharPref(children[j]));
+        var link = PlanioToolbar.getProjectUrl() + '/wiki/' + PlanioToolbar.getPref('currentproject') + '/' + branch.getCharPref(children[j]);
+        tempItem.setAttribute("href", link);
+        tempItem.setAttribute("oncommand", "PlanioToolbar.loadUrl(this.getAttribute('href'));");
+        menu.appendChild(tempItem);
+      }
+    }else{
+      PlanioToolbar.showOptions();
     }
   },
 
@@ -203,14 +216,19 @@ var PlanioToolbar= {
     if (prefs.getCharPref("extensions.planiotoolbar.projects.name." + i) == currentProject)
       return prefs.getCharPref("extensions.planiotoolbar.projects.url." + i);
     }
-	return "No project";
+	return false;
   },
 
   getPref : function(pref) {
     var prefs = Components.classes["@mozilla.org/preferences-service;1"]
                   .getService(Components.interfaces.nsIPrefService);
     var branch = prefs.getBranch("extensions.planiotoolbar.");
-    return branch.getCharPref(pref);
+    if (branch.prefHasUserValue(pref)) {
+      return branch.getCharPref(pref);
+    }else{
+      return false;
+    }
+
   },
 
   PopulateProjects : function() {
